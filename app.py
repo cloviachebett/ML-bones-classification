@@ -34,7 +34,7 @@ if uploaded_file is not None:
     prediction_scores = model.predict(input_tensor)
     predicted_class_index = int(np.argmax(prediction_scores))
     
-    # FIXED: Explicitly cast the array index score to a standard float 
+    # Explicitly cast the array index score to a standard float 
     confidence_value = float(prediction_scores[0][predicted_class_index] * 100)
     
     categories = ["Phase 0: Early Growth Phase", "Phase 1: Mid-Stage Development", "Phase 2: Mature Bone Structure"]
